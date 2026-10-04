@@ -1,0 +1,38 @@
+﻿@model Web1.Models.Specialty
+
+@{
+    ViewData["Title"] = "Редактировать";
+}
+
+<div class="container mt-4">
+    <h2>Редактировать специальность</h2>
+    <hr />
+
+    <form asp-action="Edit">
+        <!-- СПРЯТАННЫЙ ID: очень важен, чтобы база знала, какую именно строчку мы меняем -->
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label class="form-label">Шифр</label>
+            <input asp-for="Code" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Название</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Описание</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Срок обучения (лет)</label>
+            <input asp-for="DurationYears" class="form-control" type="number" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <a asp-action="Index" class="btn btn-secondary">Назад</a>
+    </form>
+</div>

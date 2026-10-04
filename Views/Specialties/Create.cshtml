@@ -1,0 +1,38 @@
+﻿@model Web1.Models.Specialty
+
+@{
+    ViewData["Title"] = "Добавить специальность";
+}
+
+<div class="container mt-4">
+    <h2>Добавить новую специальность</h2>
+    <hr />
+
+    <!-- ВОТ ЗДЕСЬ БУДЕТ ВЫСВЕЧИВАТЬСЯ ОШИБКА -->
+    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create">
+                <div class="mb-3">
+                    <label class="form-label">Шифр</label>
+                    <input asp-for="Code" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Название</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Описание</label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Срок обучения (лет)</label>
+                    <input asp-for="DurationYears" class="form-control" type="number" />
+                </div>
+                <button type="submit" class="btn btn-primary">Создать</button>
+                <a asp-action="Index" class="btn btn-secondary">Назад</a>
+            </form>
+        </div>
+    </div>
+</div>

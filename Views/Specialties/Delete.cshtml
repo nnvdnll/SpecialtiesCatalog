@@ -1,0 +1,38 @@
+﻿@model Web1.Models.Specialty
+
+@{
+    ViewData["Title"] = "Удаление";
+}
+
+<div class="container mt-4">
+    <h2>Удаление специальности</h2>
+    <h3 class="text-danger">Вы уверены, что хотите удалить эту запись?
+        <span class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </span>
+
+    </h3>
+
+
+
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">Шифр:</dt>
+            <dd class="col-sm-10">@Model.Code</dd>
+
+            <dt class="col-sm-2">Название:</dt>
+            <dd class="col-sm-10">@Model.Name</dd>
+
+            <dt class="col-sm-2">Срок:</dt>
+            <dd class="col-sm-10">@Model.DurationYears лет</dd>
+        </dl>
+
+        <!-- Форма для подтверждения удаления -->
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">Да, удалить</button>
+            <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+        </form>
+    </div>
+</div>
