@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Web1.Models
+namespace WebApi1.Models
 {
     public class AppDbContext : DbContext
     {

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Web1.Models;
+using WebApi1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 // Подключаем базу данных SQLite (файл будет называться app.db)

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Web1.Models
+namespace WebApi1.Models
 {
     public class Specialty
     {

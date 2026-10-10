@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Web1.Models;
+using WebApi1.Models;
 
 #nullable disable
 
-namespace Web1.Migrations
+namespace WebApi1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20261003124209_InitialCreate")]

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Web1.Models;
+using WebApi1.Models;
 
-namespace Web1.Controllers
+namespace WebApi1.Controllers
 {
     public class SpecialtiesController : Controller
     {
